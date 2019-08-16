@@ -104,8 +104,6 @@ class Config(object):
     G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None
     
-
-
 class Production(Config):
     LOGGER = False
 
