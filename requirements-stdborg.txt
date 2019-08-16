@@ -33,3 +33,4 @@ webdriver-manager
 cowpy
 cowsay
 pyfiglet
+pySmartDL
