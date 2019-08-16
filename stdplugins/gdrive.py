@@ -89,8 +89,6 @@ async def download(dryb):
                         display_message = current_message
                         await asyncio.sleep(1)
                 except Exception as e:
-                    LOGS.info(str(e))
-                    pass
             end = datetime.now()
             duration = (end - start).seconds
             if downloader.isSuccessful():
