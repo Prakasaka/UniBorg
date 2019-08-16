@@ -103,8 +103,6 @@ class Config(object):
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
     G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None
-    #TheCatApi
-    CAT_API = os.environ.get("CAT_API", None)
     #Carbon
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
     GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
