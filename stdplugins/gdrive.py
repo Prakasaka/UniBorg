@@ -91,11 +91,11 @@ async def download(dryb):
                 except Exception as e:
                     logger.info(str(e))
             end = datetime.now()
-            duration = (end - start).seconds
+            ms = (end - start).seconds
             if downloader.isSuccessful():
                 await dryb.edit(
                     "Downloaded to `{}` in {} seconds.\nNow Uploading to Google Drive...".format(
-                        downloaded_file_name, duration)
+                        downloaded_file_name, ms)
                 )
                 required_file_name = downloaded_file_name
             else:
@@ -118,10 +118,10 @@ async def download(dryb):
             else:
                 end = datetime.now()
                 required_file_name = downloaded_file_name
-                duration = (end - start).seconds
+                ms = (end - start).seconds
                 await dryb.edit(
                     "Downloaded to `{}` in {} seconds.\nNow Uploading to GDrive...".format(
-                        downloaded_file_name, duration)
+                        downloaded_file_name, ms)
                 )
     if required_file_name:
         #
