@@ -108,7 +108,7 @@ async def download(dryb):
                 c_time = time.time()
                 downloaded_file_name = await dryb.client.download_media(
                     await dryb.get_reply_message(),
-                    TMP_DOWNLOAD_DIRECTORY,
+                    Config.TMP_DOWNLOAD_DIRECTORY,
                     progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                         progress(d, t, dryb, c_time, "Downloading...")
                     )
