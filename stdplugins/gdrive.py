@@ -162,7 +162,7 @@ async def create_token_file(token_file, event):
     )
     authorize_url = flow.step1_get_authorize_url()
     await event.edit("Check your userbot log for authentication link !!")
-    async with event.client.conversation(chats=Config.PRIVATE_GROUP_BOT_API_ID as conv:
+    async with event.client.conversation(Config.PRIVATE_GROUP_BOT_API_ID as conv:
         await conv.send_message(f"Go to the following link in your browser: {authorize_url} and reply the code")
         response = conv.wait_event(events.NewMessage(
             outgoing=True,
