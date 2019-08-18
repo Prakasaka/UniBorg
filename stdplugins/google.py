@@ -27,21 +27,21 @@ async def _(event):
     if event.fwd_from:
         return
     await event.edit("`UniBorg is Getting Information From Google Please Wait... ✍️🙇`")
-        match_ = event.pattern_match.group(1)
-        match = quote_plus(match_)
-        if not match:
-            await event.edit("`I can't search nothing !!`")
-            return
-        plain_txt = get(f"https://www.startpage.com/do/search?cmd=process_search&query={match}", 'html').text
-        soup = BeautifulSoup(plain_txt, "lxml")
-        msg = ""
-        for result in soup.find_all('a', {'class': 'w-gl__result-title'}):
-            title = result.text
-            link = result.get('href')
-            msg += f"**{title}**{link}\n"
-        await event.edit(
-            "**Google Search Query:**\n\n`" + match_ + "`\n\n**Results:**\n" + msg,
-            link_preview = False
+    match_ = event.pattern_match.group(1)
+    match = quote_plus(match_)
+    if not match:
+        await event.edit("`I can't search nothing !!`")
+        return
+    plain_txt = get(f"https://www.startpage.com/do/search?cmd=process_search&query={match}", 'html').text
+    soup = BeautifulSoup(plain_txt, "lxml")
+    msg = ""
+    for result in soup.find_all('a', {'class': 'w-gl__result-title'}):
+        title = result.text
+        link = result.get('href')
+        msg += f"**{title}**{link}\n"
+    await event.edit(
+        "**Google Search Query:**\n\n`" + match_ + "`\n\n**Results:**\n" + msg,
+        link_preview = False
 
 
 @borg.on(admin_cmd("google image (.*)"))
