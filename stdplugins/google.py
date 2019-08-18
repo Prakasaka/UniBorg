@@ -6,7 +6,7 @@ Available Commands:
 
 import asyncio
 import os
-from re from re import findall
+from re import findall
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
