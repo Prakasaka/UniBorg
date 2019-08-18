@@ -39,7 +39,7 @@ async def _(event):
         msg += f"**{title}**{link}\n"
     await event.edit(
         "**Google Search Query:**\n\n`" + match_ + "`\n\n**Results:**\n" + msg,
-        link_preview = False
+        link_preview = False)
 
 
 @borg.on(admin_cmd("google image (.*)"))
