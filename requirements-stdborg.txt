@@ -8,7 +8,7 @@ googletrans
 google_images_download
 google-api-python-client
 google_auth_oauthlib
-gsearch>=1.6.0
+git+https://github.com/MarioVilas/googlesearch.git/
 gtts
 hachoir
 Pillow
