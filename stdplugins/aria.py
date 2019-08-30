@@ -83,6 +83,10 @@ async def magnet_download(event):
 		return
 	gid = download.gid
 	await progress_status(gid=gid,event=event,previous=None)
+	file = aria2.get_download(gid)
+	if file.followed_by_ids:
+		new_gid = await check_metadata(gid)
+		await progress_status(gid=new_gid,event=event,previous=None)
 
 @borg.on(events.NewMessage(pattern=r"\.ariaRM", outgoing=True))
 async def remove_all(event):
@@ -124,7 +128,9 @@ async def show_all(event):
 			)				
 
 async def check_metadata(gid):
-	file = aria2.get_download(gid)	
+	file = aria2.get_download(gid)
+	new_gid = file.followed_by_ids[0]
+	paas new_gid	
 
 async def progress_status(gid,event,previous):
 	try:
