@@ -14,9 +14,8 @@ async def _(event):
         s_help_string = ""
     help_string = """@UniBorg
 Python {}
-Telethon {}
-
-UserBot Forked from https://github.com/expectocode/uniborg""".format(
+Telethon {}`
+""".format(
         sys.version,
         __version__
     )
