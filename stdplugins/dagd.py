@@ -24,7 +24,7 @@ async def _(event):
         await event.edit("i can't seem to find {} on the internet".format(input_str))
 
 
-@borg.on(admin_cmd("url (.*)"))
+@borg.on(admin_cmd("short (.*)"))
 async def _(event):
     if event.fwd_from:
         return
