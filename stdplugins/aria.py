@@ -130,7 +130,7 @@ async def show_all(event):
 async def check_metadata(gid):
 	file = aria2.get_download(gid)
 	new_gid = file.followed_by_ids[0]
-	paas new_gid	
+	pass
 
 async def progress_status(gid,event,previous):
 	try:
