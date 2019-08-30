@@ -72,9 +72,10 @@ async def torrent_download(event):
 async def magnet_download(event):
 	if event.fwd_from:
 		return
-	var = event.text[5:]
-	print(var)	
-	uris = [var]
+	var = event.text[5:]	
+	uris = var
+	uris = uris.replace("`","")
+	logger.info(uris)
 	try: # Add URL Into Queue
 		download = aria2.add_uris(uris, options=None, position=None)
 	except Exception as e:
