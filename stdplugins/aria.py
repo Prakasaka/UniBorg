@@ -73,8 +73,7 @@ async def magnet_download(event):
 	if event.fwd_from:
 		return
 	var = event.text[5:]	
-	uris = ["var"]
-	logger.info(uris)
+	uris = [var]
 	try: # Add URL Into Queue
 		download = aria2.add_uris(uris, options=None, position=None)
 	except Exception as e:
@@ -158,6 +157,5 @@ async def progress_status(gid,event,previous):
 			file.remove(force=True)
 			await event.edit("Download Auto Canceled :\n`{}`\nYour Torrent/Link is Dead.".format(file.name))
 		else:
-			logger.info(str(e))
-			await event.edit("Error :\n`{}`".format(str(e)))
+			await event.edit("Error")
 			return			
