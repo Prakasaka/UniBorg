@@ -34,4 +34,3 @@ cowpy
 cowsay
 pyfiglet
 pySmartDL
-aria2p
