@@ -1,3 +1,4 @@
 telethon>=1.9.0
 lxml
+aria2p
 -r ./requirements-stdborg.txt
