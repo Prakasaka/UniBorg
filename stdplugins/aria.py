@@ -73,7 +73,7 @@ async def magnet_download(event):
 	if event.fwd_from:
 		return
 	var = event.text[5:]	
-	uris = [var]
+	uris = ["var"]
 	logger.info(uris)
 	try: # Add URL Into Queue
 		download = aria2.add_uris(uris, options=None, position=None)
