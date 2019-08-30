@@ -74,7 +74,6 @@ async def magnet_download(event):
 		return
 	var = event.text[5:]	
 	uris = [var]
-	uris = uris.replace("`","")
 	logger.info(uris)
 	try: # Add URL Into Queue
 		download = aria2.add_uris(uris, options=None, position=None)
