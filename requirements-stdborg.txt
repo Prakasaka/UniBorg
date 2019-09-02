@@ -35,3 +35,4 @@ cowsay
 pyfiglet
 pySmartDL
 telepot
+urllib2
