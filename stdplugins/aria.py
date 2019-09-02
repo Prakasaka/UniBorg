@@ -3,6 +3,7 @@
 
 import aria2p
 import asyncio
+from telethon import events
 import io
 import os
 
