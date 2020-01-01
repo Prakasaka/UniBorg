@@ -36,3 +36,4 @@ pyfiglet
 pySmartDL
 telepot
 httplib2
+telethon>=1.10.3
