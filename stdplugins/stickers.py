@@ -47,7 +47,7 @@ async def _(event):
     me = borg.me
     userid = event.from_id
     packname = rf"{userid}'s Pack"
-    packshortname = f"{userid}"  # format: Uni_Borg_userid
+    packshortname = f"Uni{userid}"  # format: Uni_Borg_userid
 
     await event.edit("Grabbing Sketch Brush & Painting this Picture...")
 
